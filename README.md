@@ -28,7 +28,7 @@ muestra el rostro**. En escenas grupales aparece como silueta oscura.
 | Archivo | Estado |
 |---|---|
 | `00_definiciones.rpy` | ✅ Terminado |
-| `01_prologo.rpy` | ✅ Terminado (versión extendida, 7 escenas) |
+| `01_prologo.rpy` | ⬜ Pendiente - (7 escenas — 2/7 terminadas) |
 | `02_capitulo1.rpy` | ⬜ Pendiente — siguiente tarea |
 | `03_capitulo2.rpy` | ⬜ Pendiente |
 | `04_capitulo3.rpy` | ⬜ Pendiente |
@@ -103,9 +103,9 @@ criterio de desempate de toda la partida.
 
 ### Estructura del prólogo (7 escenas)
 
-1. **Casa de los Uesugi** — presentación de Futaro por lo que le falta.
+1. **Casa de los Uesugi** — presentación de Futaro por lo que le falta.   ✅ Terminado
    Deuda familiar, notas como única cosa que controla. Aparece Raiha.
-2. **La oferta** — Isanari propone el trabajo de tutor. Primer menú cosmético.
+2. **La oferta** — Isanari propone el trabajo de tutor. Primer menú cosmético.  ✅ Terminado
 3. **Instituto Asaba** — profesor felicita por el examen; primer roce con
    Itsuki (asiento y bento); azotea. Segundo menú cosmético.
 4. **Camino al departamento** — Futaro calcula mal las premisas.
@@ -140,10 +140,10 @@ Todos en 1920×1080, WebP salvo indicación.
 
 | Archivo | Uso |
 |---|---|
-| `bg_cuarto_examen.webp` | Cuarto de Futaro con el resultado `1位` marcado en rojo sobre la hoja |
+| `bg_escritorio.webp` | Cuarto de Futaro con el resultado `1位` marcado en rojo sobre la hoja |
 | `bg_cuarto_futaro.webp` | El mismo cuarto sin la marca |
 | `bg_comedor.webp` | Cocina-comedor japonesa, escena de la cena |
-| `bg_foto_familiar.png` | Retrato familiar enmarcado (ver abajo) |
+| `bg_foto_familiar_marco.png` | Retrato familiar enmarcado (ver abajo) |
 
 Los demás fondos del prólogo siguen siendo **placeholders `Solid()`** de
 colores planos definidos al inicio de `01_prologo.rpy`: `bg_casa`,
@@ -162,40 +162,12 @@ existen fotos de esa época). Va enmarcado y colgado en una pared en penumbra.
 
 | Archivo | Notas |
 |---|---|
-| `raiha_hablando.webp` | 747×880, camiseta de rayas |
-| `raiha_sorprendida.webp` | 747×880, jersey de cuello alto |
-| `sprite_isanari.webp` | Recortado, busto |
-| `sprite_madre.webp` | Recortado, busto |
-| `sprite_futaro_silueta.webp` | Silueta oscura para escenas grupales |
+| `raiha_hablando.png` | 650×951 |
+| `raiha_regano.png` | 650×992 |
+| `isanari_neutral.png` | 850x1169 |
+| `isanari_sonriendo.png` | 880x1112 |
 
 ---
-
-## 7. Convención de sprites — IMPORTANTE
-
-Los dos sprites de Raiha están normalizados a un lienzo común. **Todo sprite
-nuevo debe respetar esta convención** o volverán los descuadres.
-
-```
-Lienzo:        747 × 880 px
-Nivel de ojos: y = 275
-Eje facial:    x = 320
-Altura cabeza: 435 px (de la coronilla al mentón)
-```
-
-Transform que los usa:
-
-```renpy
-transform pj:
-    xalign 0.68
-    yanchor 0.0
-    ypos 90
-    zoom 0.9
-```
-
-`yanchor 0.0` + `ypos` ancla por el borde superior, de modo que el excedente
-se derrama por abajo y la pantalla lo recorta. Así se consigue el encuadre de
-novela visual (personaje cortado a la altura del muslo) en vez de una figura
-entera flotando.
 
 ### Nombres de imagen: con espacio, no con guion bajo
 
@@ -227,10 +199,10 @@ departamento. Ahorra un set entero de cuerpos y nadie lo cuestiona.
 | Nino | 2 — molesta, neutral |
 | Yotsuba | 2 — sonrisa amplia, sorprendida |
 | Miku | 2 — mirada baja, levantando la vista |
-| Raiha | 2 — ✅ hechas |
-| Isanari | 2 — sonrisa socarrona, neutral |
+| Raiha | 2 —  sonriendo, un poco molesta | ✅ Terminado
+| Isanari | 2 — sonrisa socarrona, neutral | ✅ Terminado
 | Maruo | 1 — severo (no sonríe nunca) |
-| Profesor / madre | 0 — no necesitan sprite |
+| Profesor / madre | 0 — no necesitan sprite | ✅ Terminado
 
 **Total: 18 caras y 8 cuerpos.**
 
