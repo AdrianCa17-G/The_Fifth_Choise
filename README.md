@@ -28,7 +28,7 @@ muestra el rostro**. En escenas grupales aparece como silueta oscura.
 | Archivo | Estado |
 |---|---|
 | `00_definiciones.rpy` | ✅ Terminado |
-| `01_prologo.rpy` | ⬜ Pendiente - (7 escenas — 2/7 terminadas) |
+| `01_prologo.rpy` | ⬜ Pendiente - (7 escenas — 5/7 terminadas) |
 | `02_capitulo1.rpy` | ⬜ Pendiente — siguiente tarea |
 | `03_capitulo2.rpy` | ⬜ Pendiente |
 | `04_capitulo3.rpy` | ⬜ Pendiente |
@@ -106,10 +106,10 @@ criterio de desempate de toda la partida.
 1. **Casa de los Uesugi** — presentación de Futaro por lo que le falta.   ✅ Terminado
    Deuda familiar, notas como única cosa que controla. Aparece Raiha.
 2. **La oferta** — Isanari propone el trabajo de tutor. Primer menú cosmético.  ✅ Terminado
-3. **Instituto Asaba** — profesor felicita por el examen; primer roce con
+3. **Instituto Asaba** — profesor felicita por el examen; primer roce con  ✅ Terminado
    Itsuki (asiento y bento); azotea. Segundo menú cosmético.
-4. **Camino al departamento** — Futaro calcula mal las premisas.
-5. **La revelación** — conoce a las cinco. Orden: Ichika, Nino, Miku,
+4. **Camino al departamento** — Futaro calcula mal las premisas.  ✅ Terminado
+5. **La revelación** — conoce a las cinco. Orden: Ichika, Nino, Miku,  ✅ Terminado
    Yotsuba, e Itsuki de última (cambio deliberado respecto al anime, para que
    el prólogo cierre con golpe en vez de con enumeración).
 6. **El contrato** — Maruo. Aparece por primera vez la palabra «despedido»,
