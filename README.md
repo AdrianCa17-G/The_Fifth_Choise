@@ -28,7 +28,7 @@ muestra el rostro**. En escenas grupales aparece como silueta oscura.
 | Archivo | Estado |
 |---|---|
 | `00_definiciones.rpy` | ✅ Terminado |
-| `01_prologo.rpy` | ⬜ Pendiente - (7 escenas — 5/7 terminadas) |
+| `01_prologo.rpy` | ✅ Terminado (7 escenas) |
 | `02_capitulo1.rpy` | ⬜ Pendiente — siguiente tarea |
 | `03_capitulo2.rpy` | ⬜ Pendiente |
 | `04_capitulo3.rpy` | ⬜ Pendiente |
@@ -112,9 +112,9 @@ criterio de desempate de toda la partida.
 5. **La revelación** — conoce a las cinco. Orden: Ichika, Nino, Miku,  ✅ Terminado
    Yotsuba, e Itsuki de última (cambio deliberado respecto al anime, para que
    el prólogo cierre con golpe en vez de con enumeración).
-6. **El contrato** — Maruo. Aparece por primera vez la palabra «despedido»,
+6. **El contrato** — Maruo. Aparece por primera vez la palabra «despedido», ✅ Terminado
    semilla narrativa del Final Malo.
-7. **El primer intento** — clase fallida. Cada hermana se escapa a su manera.
+7. **El primer intento** — clase fallida. Cada hermana se escapa a su manera. ✅ Terminado
    Tercer menú cosmético. Cierra en fracaso, no en victoria.
 
 Termina con `jump cap1_inicio`.
@@ -140,15 +140,35 @@ Todos en 1920×1080, WebP salvo indicación.
 
 | Archivo | Uso |
 |---|---|
-| `bg_escritorio.webp` | Cuarto de Futaro con el resultado `1位` marcado en rojo sobre la hoja |
-| `bg_cuarto_futaro.webp` | El mismo cuarto sin la marca |
-| `bg_comedor.webp` | Cocina-comedor japonesa, escena de la cena |
-| `bg_foto_familiar_marco.png` | Retrato familiar enmarcado (ver abajo) |
+| bg_cuarto_mc | Cuarto de mc, aqui es donde va a terminar el dia |     
+| bg_comedor | Cocina-comedor japonesa, donde hay reuniones familiares del mc |   
+| bg_instituto | Donde estudia mc |   
+| bg_aula | Aula donde esta mc con las quintillizas |         
+| bg_azotea | Lugar donde itsuki y mc vuelven a discutir |       
+| bg_edificio | Edificio de las quintillizas |     
+| bg_entrada_edificio | Puerta a la entrada de la casa de las quintillizas |        
+| bg_departamento | Casa por dentro de las quintillizas |
 
-Los demás fondos del prólogo siguen siendo **placeholders `Solid()`** de
-colores planos definidos al inicio de `01_prologo.rpy`: `bg_casa`,
-`bg_instituto`, `bg_aula`, `bg_azotea`, `bg_calle`, `bg_calle_noche`,
-`bg_departamento`, `bg_negro`. Sustituir línea a línea según se generen.
+Todos estos bg ya son definitivos y son utilizados en el prologo, 
+no solo serán usados ahi, sino en todo el desarrollo del juego.
+
+### CGs o Artes de escena (`game/images/cg/`)
+
+| Archivo | Uso | En que escena |
+|---|---|---|
+| cg_familia | Retrato familiar, primer vistazo de todo el juego, donde empieza todo, mas detalles abajo | Escena 1 |     
+| cg_calificacion | Es bg_cuarto_mc, lo mismo, solo que hay un examen con una nota para que de sentido al dialogo de mc al inicio del prologo | Escena 1 |  
+| cg_examen   | Dialogo entre mc y su docente, resaltando su inteligencia | Escena 3 |   
+| cg_itsuki_sentada  | Primer encuentro entre mc e Itsuki, aqui se desarrolla su dinámica | Escena 3 |         
+| cg_itsuki_azotea | Segundo encuentro entre mc e Itsuki, un espacio de dialogo profundo entre ellos | Escena 3 |     
+| cg_manija_edificio | mc abriendo la puerta del departamento de las quintillizas | Escena 4 |    
+| cg_ichika_puerta | Primer encuentro entre mc e Ichika | Escena 5 |          
+| cg_nino_pasillo  | Primer encuentro entre mc y Nino | Escena 5 |  
+| cg_miku_sofa | Primer encuentro entre mc y Miku | Escena 5 |  
+| cg_yotsuba_corriendo | Primer encuentro entre mc y Yotsuba | Escena 5 |  
+| cg_itsuki_discusion  | Tercer encuentro entre Itsuki y mc, aunque aqui ya se intentan conocer mejor | Escena 5 |  
+| cg_maruo_reunion | Padre de las quintillizas, establece las condiciones del trabajo con mc | Escena 6 |  
+| cg_hermanas_estudiando | Primera dinamica entre mc y las quintillizas, su sesión de estudio resulta un fracaso total | Escena 7 |  
 
 ### El retrato familiar
 
@@ -157,8 +177,23 @@ Futaro y Raiha), igualando el tamaño de las cabezas y unificando el color.
 **La madre está en escala de grises** porque falleció; eso resuelve la
 inconsistencia temporal (cuando murió, Futaro era niño y Raiha un bebé, y no
 existen fotos de esa época). Va enmarcado y colgado en una pared en penumbra.
+Es el unico asset en formato png no webp, estoy pensando si modificar 
+nuevamente la imagen o dejarla tal como está.
+
+### Observación sobre los CGs
+
+Hay algunos CGs que creo que solo serán uso único para el prologo, y otras
+que observo se pueden reutilizar para el desarrollo de toda la historia y
+el juego, pero debemos observar cuales serían útiles.
 
 ### Sprites (`game/images/sprites/`)
+
+Son los únicos sprites usados hasta ahora en el prólogo, obviamente como es
+corto no se usaron tantos sprites de cada persona, aquì mas me enfoqué en
+pulir con todo esfuerzo los sprites de las quintillizas, los sprites de 
+raiha e Isanari aún debo modifcarlos ya que no están como quería.
+
+
 
 | Archivo | Notas |
 |---|---|
