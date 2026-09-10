@@ -193,14 +193,32 @@ corto no se usaron tantos sprites de cada persona, aquì mas me enfoqué en
 pulir con todo esfuerzo los sprites de las quintillizas, los sprites de 
 raiha e Isanari aún debo modifcarlos ya que no están como quería.
 
+Un solo atuendo para las cinco: **uniforme escolar**, también en el
+departamento. Ahorra un set entero de cuerpos y nadie lo cuestiona.
+
+Al final me decidi por un formato png de los sprites en tamaño
+630 x 930 en todos, para mantener balanceados, debo verificar si ese 
+tamaño iría para los sprites de Raiha e Isanari.
+
+| Personaje | Expresion | Archivo | Estado | Tamaño |
+|---|---|---|---|---|
+| Raiha | Sonriendo | `raiha_hablando.png` | Modificar | Pendiente |
+| Raiha | Un poco molesta | `raiha_regano.png` | Modificar | Pendiente |
+| Isanari | Sonrisa leve | `isanari_sonrisa.png` | Modificar | Pendiente |
+| Isanari | Neutral | `isanari_neutral.png` | Modificar | Pendiente |
+| Itsuki | Neutral | `itsuki_neutral.png` |  ✅ Terminado | 630 x 930 px |
+| Itsuki | Sonriendo | `itsuki_sonrisa.png` |  ✅ Terminado | 630 x 930 px |
+| Itsuki | Molesta | `itsuki_molesta.png` |  ✅ Terminado | 630 x 930 px |
+| Itsuki | Sorprendida | `itsuki_sorprendida.png` |  ✅ Terminado | 630 x 930 px |
+| Itsuki | Timida | `itsuki_timida.png` |  ✅ Terminado | 630 x 930 px |
+| Yotsuba | Sonriendo | `yotsuba_sonrisa.png` |  ✅ Terminado | 630 x 930 px |
+| Miku | Aburrida | `miku_aburrida.png` |  ✅ Terminado | 630 x 930 px |
+| Nino | Neutral | `nino_neutral.png` |  ✅ Terminado | 630 x 930 px |
+| Ichika | Neutral | `ichika_neutral.png` |  ✅ Terminado | 630 x 930 px |
+| Ichika | Sonriendo | `Ichika_sonrisa.png` |  ✅ Terminado | 630 x 930 px |
+| Profesor / Madre / Maruo | 0 — no necesitan sprite | ✅ Terminado
 
 
-| Archivo | Notas |
-|---|---|
-| `raiha_hablando.png` | 650×951 |
-| `raiha_regano.png` | 650×992 |
-| `isanari_neutral.png` | 850x1169 |
-| `isanari_sonriendo.png` | 880x1112 |
 
 ---
 
@@ -222,22 +240,10 @@ y parece que parpadea.
 
 ---
 
-## 8. Plan de sprites del prólogo
 
-Un solo atuendo para las cinco: **uniforme escolar**, también en el
-departamento. Ahorra un set entero de cuerpos y nadie lo cuestiona.
 
-| Personaje | Caras necesarias |
-|---|---|
-| Itsuki | 4 — seria, molesta, sorprendida, casi-sonrisa |
-| Ichika | 3 — sonrisa, neutral, ojos cerrados |
-| Nino | 2 — molesta, neutral |
-| Yotsuba | 2 — sonrisa amplia, sorprendida |
-| Miku | 2 — mirada baja, levantando la vista |
-| Raiha | 2 —  sonriendo, un poco molesta | ✅ Terminado
-| Isanari | 2 — sonrisa socarrona, neutral | ✅ Terminado
-| Maruo | 1 — severo (no sonríe nunca) |
-| Profesor / madre | 0 — no necesitan sprite | ✅ Terminado
+
+
 
 **Total: 18 caras y 8 cuerpos.**
 
