@@ -181,29 +181,7 @@ no solo serán usados ahi, sino en todo el desarrollo del juego.
 | cg_yotsuba_corriendo | Primer encuentro entre mc y Yotsuba | Escena 5 |  
 | cg_itsuki_discusion  | Tercer encuentro entre Itsuki y mc, aunque aqui ya se intentan conocer mejor | Escena 5 |  
 | cg_maruo_umbral | Padre de las quintillizas, establece las condiciones del trabajo con mc | Escena 6 |  
-| cg_estudio_mesa | Primera dinamica entre mc y las quintillizas, su sesión de estudio resulta un fracaso total | Escena 7 |  
-
-**Nomenclatura.** Los dos últimos se llamaban antes `cg_maruo_reunion` y
-`cg_hermanas_estudiando`; los nombres reales en disco son los de la tabla.
-El CG de la puerta tiene dos versiones (`ichika_puerta` y `ichika_puerta_v2`);
-hay que fijar cuál se usa y borrar la otra antes de que el guion las mezcle.
-
-**Ficha técnica de los dos CG más recientes:**
-
-- `cg_maruo_umbral` — Maruo de frente, primer plano, contrapicado leve, fondo
-  con lámpara, ladrillo y escalera. Fuente PNG de PixAI, sin realce de nitidez.
-- `cg_estudio_mesa` — las cinco en fila detrás de la mesa baja durante la
-  prueba de diagnóstico: Ichika dormida, Miku girada con audífonos, Yotsuba
-  escribiendo, Itsuki concentrada en la hoja, Nino de brazos cruzados mirando a
-  cámara. Generado en PixAI y corregido en Gemini (blazer de Nino, peinado de
-  Ichika, tono de pelo de Miku). Fuente JPEG, con realce de nitidez.
-
-**Pendientes de esta tabla:** faltan por generar los CG de Yotsuba e Itsuki de
-la escena de la presentación (`cg_yotsuba_corriendo` y `cg_itsuki_discusion`).
-Opcional: `cg_maruo_espaldas` para el cierre de la escena 6 («se dio la vuelta
-y se fue»); el prompt de Maruo ya está validado y solo cambian los bloques de
-encuadre y pose, y además es la opción segura porque sin rostro visible el LoRA
-no puede feminizarlo.
+| cg_estudio_hermanas | Primera dinamica entre mc y las quintillizas, su sesión de estudio resulta un fracaso total | Escena 7 |  
 
 ### El retrato familiar
 
