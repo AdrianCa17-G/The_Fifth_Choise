@@ -197,7 +197,7 @@ Un solo atuendo para las cinco: **uniforme escolar**, también en el
 departamento. Ahorra un set entero de cuerpos y nadie lo cuestiona.
 
 Al final me decidi por un formato png de los sprites en tamaño
-630 x 930 en todos, para mantener balanceados, debo verificar si ese 
+760 x 930 en todos, para mantener balanceados, debo verificar si ese 
 tamaño iría para los sprites de Raiha e Isanari.
 
 | Personaje | Expresion | Archivo | Estado | Tamaño |
@@ -206,52 +206,55 @@ tamaño iría para los sprites de Raiha e Isanari.
 | Raiha | Un poco molesta | `raiha_regano.png` | Modificar | Pendiente |
 | Isanari | Sonrisa leve | `isanari_sonrisa.png` | Modificar | Pendiente |
 | Isanari | Neutral | `isanari_neutral.png` | Modificar | Pendiente |
-| Itsuki | Neutral | `itsuki_neutral.png` |  ✅ Terminado | 630 x 930 px |
-| Itsuki | Sonriendo | `itsuki_sonrisa.png` |  ✅ Terminado | 630 x 930 px |
-| Itsuki | Molesta | `itsuki_molesta.png` |  ✅ Terminado | 630 x 930 px |
-| Itsuki | Sorprendida | `itsuki_sorprendida.png` |  ✅ Terminado | 630 x 930 px |
-| Itsuki | Timida | `itsuki_timida.png` |  ✅ Terminado | 630 x 930 px |
-| Yotsuba | Sonriendo | `yotsuba_sonrisa.png` |  ✅ Terminado | 630 x 930 px |
-| Miku | Aburrida | `miku_aburrida.png` |  ✅ Terminado | 630 x 930 px |
-| Nino | Neutral | `nino_neutral.png` |  ✅ Terminado | 630 x 930 px |
-| Ichika | Neutral | `ichika_neutral.png` |  ✅ Terminado | 630 x 930 px |
-| Ichika | Sonriendo | `Ichika_sonrisa.png` |  ✅ Terminado | 630 x 930 px |
-| Profesor / Madre / Maruo | 0 — no necesitan sprite | ✅ Terminado
+| Itsuki | Neutral | `itsuki_neutral.png` |  ✅ Terminado | 760 x 930 px |
+| Itsuki | Sonriendo | `itsuki_sonrisa.png` |  ✅ Terminado | 760 x 930 px |
+| Itsuki | Molesta | `itsuki_molesta.png` |  ✅ Terminado | 760 x 930 px |
+| Itsuki | Sorprendida | `itsuki_sorprendida.png` |  ✅ Terminado | 760 x 930 px |
+| Itsuki | Timida | `itsuki_timida.png` |  ✅ Terminado | 760 x 930 px |
+| Yotsuba | Sonriendo | `yotsuba_sonrisa.png` |  ✅ Terminado | 760 x 930 px |
+| Miku | Aburrida | `miku_aburrida.png` |  ✅ Terminado | 760 x 930 px |
+| Nino | Neutral | `nino_neutral.png` |  ✅ Terminado | 760 x 930 px |
+| Ichika | Neutral | `ichika_neutral.png` |  ✅ Terminado | 760 x 930 px |
+| Ichika | Sonriendo | `Ichika_sonrisa.png` |  ✅ Terminado | 760 x 930 px |
+| Profesor / Madre / Maruo | 0 — no necesitan sprite | | ✅ Terminado | |
 
-
-
----
-
-### Nombres de imagen: con espacio, no con guion bajo
-
-```renpy
-image raiha hablando    = "sprites/raiha_hablando.webp"
-image raiha sorprendida = "sprites/raiha_sorprendida.webp"
-```
-
-Así Ren'Py trata `raiha` como etiqueta y el resto como atributo, y
-`show raiha sorprendida` **sustituye** el sprite en lugar de apilar dos.
-
-### Transiciones
-
-`with dissolve` **solo en la primera aparición**. En los cambios de expresión
-posteriores, `show` pelado — si no, hace un fundido cruzado entre las dos caras
-y parece que parpadea.
-
----
-
-
-
-
-
-
-**Total: 18 caras y 8 cuerpos.**
-
-La «casi-sonrisa» de Itsuki es específica del prólogo y la más importante: sin
-ella se cae el momento de la azotea.
+Los sprites que dicen neutral son los sprites base de cada quintilliza, 
+algunas no tienen porque solo aparecieron poco tiempo en pantalla o sus
+dialogos no encajarian con sus poses neutrales, ademas itsuki tiene un 
+sprite que aun no se ha utilizado "Itsuki Timida", debido al prologo, no
+se encontró un momento exacto donde utilizarlo.
 
 Como las cinco tienen la misma cara, el jugador las distingue por silueta.
 Comprobar que peinado y accesorio se leen al 30% de tamaño.
+
+---
+
+### Transiciones
+
+`pj` . Hace que el sprite del personaje aparezca exactamente en el 
+centro de la pantalla
+
+`pj_mueve` . Hace que el sprite del personaje se mueva con una transicion
+desde una coordenada hasta otra coordenada, generalmente en x, en un
+determinado tiempo, estas coordenas las coloca el jugador.
+
+`habla` . Hace que el sprite del personaje se agrande un poco su zoom,
+haciendo alusion a que esta hablando.
+
+`calla` . Hace que el sprite del personaje se tiña de una sombra negra y baje
+un poco su zoom, haciendo alusion a que no esta hablando.
+
+`with dissolve`. Crea una transicion suave para cambio de escenas, ya sea
+en BGs o en CGs.
+
+` Definir dissolve`. Dura 1.2 segundos
+define disolucion_lenta = Dissolve(1.2).
+
+`with fade`. Realiza un fundido en tres pasos secuenciales, ya sea
+en BGs o en CGs.
+
+OJO. Aqui hay que analizar en donde usar dissolve y en donde fade, ya que las
+puse al azar, segun yo están todas bien pero no se si están con el uso adecuado.
 
 ---
 
