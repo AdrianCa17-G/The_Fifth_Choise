@@ -1,8 +1,8 @@
 # The Fifth Choice — Estado del proyecto
 
 Documento de contexto para retomar el desarrollo en una conversación nueva.
-Última actualización: Fase 0, Fase 1 y consolidación del pipeline de arte
-(pesos de LoRA, estándar de sprites por IPD y corrección local en Gemini).
+Última actualización: sprites de Isanari y Raiha cerrados, retrato familiar
+unificado, y siete CG y fondos regenerados y pasados al estándar del set.
 
 ---
 
@@ -169,19 +169,45 @@ no solo serán usados ahi, sino en todo el desarrollo del juego.
 
 | Archivo | Uso | En que escena |
 |---|---|---|
-| cg_familia | Retrato familiar, primer vistazo de todo el juego, donde empieza todo, mas detalles abajo | Escena 1 |     
+| cg_familia | Retrato familiar, primer vistazo de todo el juego, donde empieza todo, mas detalles abajo. Unificado en post, ya en WebP | Escena 1 |     
 | cg_calificacion | Es bg_cuarto_mc, lo mismo, solo que hay un examen con una nota para que de sentido al dialogo de mc al inicio del prologo | Escena 1 |  
-| cg_examen   | Dialogo entre mc y su docente, resaltando su inteligencia | Escena 3 |   
+| cg_examen   | Dialogo entre mc y su docente, resaltando su inteligencia. 🔄 Rehecho | Escena 3 |   
 | cg_itsuki_sentada  | Primer encuentro entre mc e Itsuki, aqui se desarrolla su dinámica | Escena 3 |         
-| cg_itsuki_azotea | Segundo encuentro entre mc e Itsuki, un espacio de dialogo profundo entre ellos | Escena 3 |     
+| cg_itsuki_azotea | Segundo encuentro entre mc e Itsuki, un espacio de dialogo profundo entre ellos. 🔄 Rehecho | Escena 3 |     
 | cg_manija_edificio | mc abriendo la puerta del departamento de las quintillizas | Escena 4 |    
 | cg_ichika_puerta | Primer encuentro entre mc e Ichika | Escena 5 |          
-| cg_nino_pasillo  | Primer encuentro entre mc y Nino | Escena 5 |  
+| cg_nino_pasillo  | Primer encuentro entre mc y Nino. 🔄 Rehecho | Escena 5 |  
 | cg_miku_sofa | Primer encuentro entre mc y Miku | Escena 5 |  
 | cg_yotsuba_corriendo | Primer encuentro entre mc y Yotsuba | Escena 5 |  
 | cg_itsuki_discusion  | Tercer encuentro entre Itsuki y mc, aunque aqui ya se intentan conocer mejor | Escena 5 |  
 | cg_maruo_umbral | Padre de las quintillizas, establece las condiciones del trabajo con mc | Escena 6 |  
 | cg_estudio_hermanas | Primera dinamica entre mc y las quintillizas, su sesión de estudio resulta un fracaso total | Escena 7 |  
+
+**Rehechos en la última sesión** (`cg_examen`, `cg_itsuki_azotea`,
+`cg_nino_pasillo`, y de paso `cg_ichika_puerta`, `cg_manija_edificio`,
+`bg_instituto` y `bg_entrada_edificio`). Los tres primeros por errores propios
+que conviene no repetir:
+
+- **`cg_examen` venía con kanji inventado por toda la hoja.** La causa era que
+  el prompt llevaba `text, english text, japanese text` en el campo positivo,
+  arrastrados de cuando se creía que había campo negativo. Nombrar lo que no
+  quieres es pedirlo. Ahora el papel se describe por lo que se ve: retícula de
+  casillas vacías, cabecera, filas numeradas y un maru rojo. Estructura sin
+  escritura.
+- **`cg_itsuki_azotea` tenía a Futaro de frente y sin cara.** No hay LoRA suyo,
+  así que el modelo lo resolvía como silueta negra; el parche en Gemini le dio
+  rostro pero se llevó por delante el trazo. Se rehízo con él **de espaldas en
+  primer término y desenfocado**, cortado por el borde del cuadro. Sin rostro no
+  hay nada que el modelo pueda estropear.
+- **`cg_nino_pasillo` era vertical**, y por eso salía con bandas negras a los
+  lados y sin fondo visible, al revés que los de Itsuki, Miku y Yotsuba. Los CG
+  van **siempre apaisados**, 1280×720. Es el mismo error de encuadre que costó
+  el corte de piernas en los sprites.
+
+**Todavía pendientes:** `cg_yotsuba_corriendo` y `cg_itsuki_discusion` de la
+escena de la presentación. Opcional: `cg_maruo_espaldas` para el cierre de la
+escena 6; el prompt de Maruo ya está validado y sin rostro visible el LoRA no
+puede feminizarlo.
 
 ### El retrato familiar
 
@@ -190,8 +216,35 @@ Futaro y Raiha), igualando el tamaño de las cabezas y unificando el color.
 **La madre está en escala de grises** porque falleció; eso resuelve la
 inconsistencia temporal (cuando murió, Futaro era niño y Raiha un bebé, y no
 existen fotos de esa época). Va enmarcado y colgado en una pared en penumbra.
-Es el unico asset en formato png no webp, estoy pensando si modificar 
-nuevamente la imagen o dejarla tal como está.
+**Decisión tomada: no se regenera en PixAI.** Es el peor caso posible para esa
+herramienta — cuatro figuras en un frame con necesidades de LoRA incompatibles
+(Isanari pide 0.1 como adulto masculino, Raiha pide 0.3 para reconocerse, y los
+LoRAs no se aplican por región), más una madre que no tiene LoRA y cuyo parecido
+es lo único que sostiene la idea narrativa.
+
+En su lugar se hizo un **pase de unificación en post**, que es lo que hace
+creíble un composite: que todo el interior del marco pase por una sola capa
+fotográfica. El orden importa:
+
+1. Máscara del interior de la foto; el marco y el passepartout no se tocan.
+2. Limpieza de los restos de subtítulo del fotograma original de Isanari (rayas
+   horizontales claras sobre el fondo liso, de un subtítulo mal borrado).
+3. Relleno del fleco cálido en la costura Isanari / Futaro, resto del recorte.
+4. **Igualación de grano**, antes de añadir nada. Isanari traía halftone fuerte
+   (nivel ~13) y Futaro estaba limpio (~2). Si se añade el grano común antes de
+   este paso, a Isanari se le suma al que ya trae.
+5. Realce leve de la madre, para que su blandura parezca decidida y no un
+   escalado mal hecho.
+6. Pase común: suavizado, dominante cálida, viñeta y un solo grano para las
+   cuatro figuras.
+
+**Ya no es el único PNG del set:** se exporta en WebP 95 como todo lo demás.
+
+**Criterio de calidad para este CG en particular:** no debe parecerse al resto
+del set. Los demás son plano cerrado, cámara con ángulo y luz dorada saturada;
+este es una fotografía enmarcada *dentro* del mundo del juego. Si se alinea con
+el lenguaje visual del set, deja de leerse como foto. El estándar es «convence
+como fotografía», no «combina con los otros CG».
 
 ### Observación sobre los CGs
 
@@ -203,8 +256,8 @@ el juego, pero debemos observar cuales serían útiles.
 
 Son los únicos sprites usados hasta ahora en el prólogo, obviamente como es
 corto no se usaron tantos sprites de cada persona, aquì mas me enfoqué en
-pulir con todo esfuerzo los sprites de las quintillizas, los sprites de 
-raiha e Isanari aún debo modifcarlos ya que no están como quería.
+pulir con todo esfuerzo los sprites de las quintillizas. Los de Raiha e Isanari
+ya están rehechos y normalizados con el estándar del set.
 
 Un solo atuendo por hermana: el **uniforme escolar**, también dentro del
 departamento. Ahorra un set entero de cuerpos y nadie lo cuestiona. Lo que sí
@@ -222,16 +275,32 @@ diferencia es justo lo que las hace distinguibles en pantalla.
 | Yotsuba | Corto naranja, cinta verde en la cabeza. | Chaleco amarillo, camisa blanca de manga corta, lazo verde a cuadros. |
 | Itsuki | Rojo intenso, muy largo (por debajo de la cintura), pasadores de estrella amarilla, un ahoge. | Chaleco rojo, camisa blanca de manga corta. Sin blazer. |
 
+Y los tres que no son hermanas, por la misma razón: si no están escritos, cada
+render les pone otra ropa.
+
+| Personaje | Pelo | Vestuario |
+|---|---|---|
+| Futaro | Negro corto, con un mechón levantado. | **Cárdigan gris claro abierto, manga larga, camisa blanca de cuello debajo, pantalón azul marino.** No es el blazer azul de las hermanas: son prendas distintas y no hay que mezclarlas. |
+| Isanari | Rubio arena apagado, corto y en pinchos, gafas de sol apoyadas en la cabeza. Ojos marrones. Delgado y fibroso, **no musculado**. | Camiseta gris oscuro de manga corta, cinturón marrón, pantalón beige, zapatos marrones. |
+| Raiha | Castaño oscuro muy largo, flequillo recto, coleta alta con lazo rosa. **Ojos marrones rojizos y piel clara.** | Camiseta de rayas blancas y rosa coral de manga corta, peto vaquero azul con bajos remangados, sandalias. |
+
+Las dos marcas en negrita de Isanari y Raiha son correcciones que costaron
+tandas: el modelo tira a hacerle a él cuerpo de gimnasio y a ella la piel
+tostada, y ninguna de las dos cede sin tokens redundantes.
+
 Al final me decidi por un formato png de los sprites en tamaño
-760 x 930 en todos, para mantener balanceados, debo verificar si ese 
-tamaño iría para los sprites de Raiha e Isanari.
+760 x 930 en todos, para mantener balanceados. **Ese tamaño vale también para
+Raiha e Isanari.** El 930 no es la altura del personaje sino la del encuadre, y
+como todos se anclan con `yanchor 1.0` el borde inferior del lienzo es la misma
+fila de pantalla para los tres. Lo que cambia en ellos no es el lienzo sino la
+fila de la línea de ojos — ver más abajo.
 
 | Personaje | Expresion | Archivo | Estado | Tamaño |
 |---|---|---|---|---|
-| Raiha | Sonriendo | `raiha_hablando.png` | Modificar | Pendiente |
-| Raiha | Un poco molesta | `raiha_regano.png` | Modificar | Pendiente |
-| Isanari | Sonrisa leve | `isanari_sonrisa.png` | Modificar | Pendiente |
-| Isanari | Neutral | `isanari_neutral.png` | Modificar | Pendiente |
+| Raiha | Sonriendo | `raiha_hablando.png` |  ✅ Terminado | 760 x 930 px |
+| Raiha | Un poco molesta | `raiha_regano.png` |  ✅ Terminado | 760 x 930 px |
+| Isanari | Sonrisa leve | `isanari_sonrisa.png` |  ✅ Terminado | 760 x 930 px |
+| Isanari | Neutral | `isanari_neutral.png` |  ✅ Terminado | 760 x 930 px |
 | Itsuki | Brazos cruzados (se usa como «seria») | `itsuki_neutral.png` |  ✅ Terminado | 760 x 930 px |
 | Itsuki | Neutral real | `itsuki_neutral2.png` |  ✅ Terminado | 760 x 930 px |
 | Itsuki | Sonriendo | `itsuki_sonrisa.png` |  ✅ Terminado | 760 x 930 px |
@@ -283,6 +352,62 @@ del elenco. El corte inferior lo fija Itsuki: su render vino apaisado en
 1280×720 y el marco la corta a media pierna, así que **todo el set quedó
 cortado ahí**. Si se regenera a Itsuki en vertical con las rodillas visibles se
 puede rehacer el set completo y recuperar el corte bajo la rodilla.
+
+#### Personajes que no miden lo que las hermanas
+
+Normalizar por IPD iguala el **tamaño de la cabeza**, no la altura. Para las
+cinco hermanas basta porque miden lo mismo. Para un adulto y una niña no: hay
+que mover además la línea de ojos, o los tres acaban con la cara a la misma
+altura y la diferencia de estatura no existe.
+
+Partiendo del set (IPD 77,2 con los ojos en 199) y de las alturas 178 / 165 /
+138 cm, la escala del juego sale a **7,44 px por centímetro** y el suelo —donde
+apoyan los pies las hermanas— cae en la fila **1348**, muy por debajo del
+lienzo. De ahí:
+
+| | escala sobre el render | fila de ojos | IPD final |
+|---|---|---|---|
+| Hermanas | referencia | 199 | 77,2 |
+| Isanari | por IPD | **109** | 77,2 |
+| Raiha | por altura | **388** | **68,3** |
+
+A los tres el lienzo los corta a la misma altura física del suelo, unos 56 cm.
+Eso es media pantorrilla en un adulto y por encima de la rodilla en una niña,
+que es lo que pasaría en una foto real: la línea de corte es del encuadre, no
+del personaje.
+
+Tres cosas aprendidas aquí que conviene no volver a discutir:
+
+- **Raiha no se normaliza por IPD.** Misma distancia entre pupilas significa
+  misma cabeza, y una niña con cabeza de adolescente queda flotando respecto al
+  suelo. Su IPD se deriva de la altura una sola vez (68,3) y luego se aplica
+  igual a sus dos expresiones, para que la cara no cambie de tamaño al
+  alternarlas.
+- **Isanari a 109, el valor que da el cálculo**, aunque recorte 24 px de las
+  puntas del pelo en el neutral y 17 en la sonrisa. Se probó dejarlo en 132 para
+  no tocarle el pelo y quedaba casi a la altura de las hermanas: la diferencia
+  de estatura se perdía entera. Con silueta de pelo en pinchos el recorte no se
+  ve; que un adulto mida lo mismo que una cría de instituto sí.
+- **109 es el techo del lienzo.** Para subirlo más habría que recortarle cráneo,
+  no puntas. Si algún día se quiere más diferencia hay que cambiar el margen
+  superior del set, no su escala: bajarle el IPD lo haría más pequeño, no más
+  alto.
+
+#### Huecos blancos: fondo o ropa
+
+Al recortar hay que decidir qué blanco encerrado es fondo (transparente) y cuál
+es ropa (opaco). El criterio del entorno no vale: el hueco entre los dedos está
+rodeado de piel igual que la raya de la camiseta lo está de tela. Lo que separa
+es la **pureza**:
+
+- **Pureza ≥ 252** → fondo. Pilla los huecos del pelo y de los dedos en fuentes
+  PNG, donde el fondo es 255 puro.
+- **O bien pureza ≥ 250,5 con más de 1000 px** → fondo. Pilla los huecos grandes
+  en fuentes JPEG de Gemini, donde el blanco baja a 251-253.
+
+Todo lo demás se conserva. Ese margen no es un capricho: los dientes de Isanari
+miden 250,1 y el brillo del ojo de Raiha 250,5, y con el umbral en 250 los dos
+salían transparentes. Se veían como agujeros negros sobre fondo oscuro.
 
 **Recorte de fondo.** El blanco de PixAI se quita por flood fill desde el
 borde, pero además hay que eliminar los huecos de fondo *encerrados* entre
@@ -371,13 +496,51 @@ puse al azar, segun yo están todas bien pero no se si están con el uso adecuad
 correcciones locales sobre imágenes ya generadas. PixAI en cuenta gratuita,
 10.000 créditos diarios que no caducan.
 
-- **Modelo base: Tsubaki.2**
+- **Modelo base por defecto: Tsubaki.2**
 - El LoRA debe coincidir con el modelo base o no hace nada y gasta créditos en
   silencio. Es el fallo más caro de la plataforma.
-- **La cuenta gratuita de PixAI no tiene campo de prompt negativo separado.**
-  Todo va en un solo campo, así que lo que se quiere evitar hay que expresarlo
-  en positivo. Esto invalida el bloque «negativo» que traía la versión anterior
-  de este documento.
+- **El campo negativo depende del modelo base, no de la cuenta.** Con Tsubaki.2
+  no aparece, y de ahí venía la idea de que la cuenta gratuita no lo tenía. Con
+  Haruka v2 sí existe, y además **viene relleno con un negativo por defecto**
+  que conviene revisar: trae `simple background` y `transparent background`, que
+  pelean directamente contra el fondo blanco liso que se pide para los sprites,
+  y `cropped`, que pelea contra el encuadre de cuerpo entero. Ahí es donde salían
+  los marcos decorativos y los textos japoneses de la nada.
+- **Cuando hay campo negativo, úsalo para lo que el positivo no puede.** Cosas
+  como `handcuffs, chains, jewelry, frame, border, multiple views, 2girls,
+  dark skin` se atacan mucho mejor desde ahí.
+- **Sin campo negativo, todo va en positivo y describiendo el resultado
+  visible**, nunca lo que se quiere evitar.
+
+### Compatibilidad de LoRA y modelo base
+
+Los LoRA de la comunidad no son todos del mismo linaje y ahí se pierden créditos:
+
+- **Tsubaki.2 es SD 1.5.** El LoRA de serie de Gotoubun que se usa es de esta
+  familia.
+- **Los LoRA marcados «Illustrious XL» son SDXL.** Con Tsubaki.2 no hacen nada.
+  PixAI autoselecciona **Haruka v2** (SDXL) al cargarlos, que no es coincidencia
+  exacta pero sí compatible: el LoRA engancha, aunque rinde por debajo de su
+  valor nominal. Por eso el LoRA de Raiha se usó a **0.85** y no a 0.75.
+- **Consecuencia:** al cambiar de base también se pierde el LoRA de serie, que
+  es de Tsubaki. Con un LoRA de personaje Illustrious se va **sin LoRA de
+  serie**; el de personaje ya trae su estilo dentro.
+
+### LoRA de personaje encontrados
+
+| Personaje | LoRA | Base | Fuerza |
+|---|---|---|---|
+| Raiha | «Raiha Uesugi - The Quintessential Quintuplets», trigger `raihau, hair bow, striped shirt, blue overalls` | Illustrious XL → usar Haruka v2 | 0.7 – 0.85 |
+
+Con LoRA de personaje **hay que quitar la redundancia del prompt**, no sumarla:
+competir con él es lo que rompe el parecido. Y ojo, el de Raiha trae los ojos
+turquesa del anime; se corrigen a marrón por prompt sin pelea.
+
+**Futaro no tiene LoRA**, y esa es la razón de fondo de que salga como silueta
+negra cada vez que se le pide de frente. La solución no es prompting: es
+encuadrarlo de espaldas, desenfocado y cortado por el borde. Sin rostro no hay
+nada que estropear, y el cárdigan gris con el pelo negro corto lo identifican de
+sobra.
 
 ### Pesos de LoRA — ya calibrados
 
@@ -606,6 +769,29 @@ franjas limpias de las que copiar. Para eso hace falta inpainting generativo
 
 ---
 
+### Herramientas de post (`herramientas/`, fuera de `game/`)
+
+Tres scripts de Python, todos con `pillow`, `numpy` y `scipy`. No son scripts de
+Ren'Py y no deben vivir dentro de `game/`.
+
+| Script | Qué hace |
+|---|---|
+| `normalizar_sprite.py` | Recorta el fondo y normaliza un sprite de hermana al estándar del set (760 × 930, ojos en 199, IPD 77,2). Con los ojos cerrados hay que pasarle `--ojos x1,y1,x2,y2`. |
+| `normalizar_extra.py` | Lo mismo para Isanari y Raiha, con sus filas de ojos propias y el modo por altura de Raiha. Incluye la regla de pureza para los huecos blancos. |
+| `escalar_cgs.py` | Pasa un lote de CG y fondos a 1920×1080 con Lanczos y WebP 95. Aplica realce de nitidez **solo a las fuentes JPEG** y con umbral. |
+
+**Detección de ojos:** los scripts buscan **iris azul**. Isanari y Raiha los
+tienen marrones, así que con ellos hay que pasar las coordenadas a mano. Lo
+mismo valdría para un futuro sprite de Maruo, que los tiene negros.
+
+**Saturación de referencia del set:** los CG aprobados están entre **68 y 84** de
+saturación media. Los que salgan muy por debajo se corrigen en el escalado, no
+regenerando — salvo que el contenido justifique el color bajo (una puerta de
+madera o un portal de hormigón no tienen color que sacar y forzarlo solo mete
+ruido).
+
+---
+
 ## 10. Trampas de Ren'Py ya encontradas
 
 - **`label start` duplicado.** Vive solo en `00_definiciones.rpy`. Los demás
@@ -627,13 +813,10 @@ franjas limpias de las que copiar. Para eso hace falta inpainting generativo
 
 ## 11. Problemas conocidos
 
-- **Cambio de ropa de Raiha.** El sprite `hablando` lleva camiseta de rayas y
-  el `sorprendida` jersey de cuello alto: vienen de escenas distintas del
-  anime. En la escena de la cena van seguidos en la misma conversación, que es
-  el peor caso. Opciones: buscar la expresión en una escena con la ropa
-  correcta, o asumirlo.
-- **Coleta cortada** en `raiha_sorprendida`: ya salía fuera de cuadro en el
-  fotograma original, no hay nada que recuperar.
+- ~~**Cambio de ropa de Raiha**~~ y ~~**coleta cortada**~~ — resueltos. Sus dos
+  sprites se generaron de cero con la misma semilla, mismo vestuario y la coleta
+  completa. `raiha_sorprendida` ya no existe: las expresiones son `hablando` y
+  `regano`.
 - **La madre en el retrato familiar** viene de una foto de artbook de 340 px de
   ancho, ampliada. Como sprite en escena funciona; en primer plano se notaría.
 - **Composición del comedor**: la mesa está centrada y adelantada. Los sprites
@@ -652,6 +835,25 @@ franjas limpias de las que copiar. Para eso hace falta inpainting generativo
 - **`Ichika_sonrisa.png` empieza por mayúscula**, contra la regla de la sección
   10. Funciona en Windows y revienta al exportar a Linux o Android. Renombrar
   ahora, que solo lo referencia el prólogo.
+- **Las gafas de Isanari cambian de sitio entre sus dos sprites**: caladas sobre
+  los ojos en el `neutral`, subidas a la frente en la `sonrisa`. Decisión
+  tomada: se asume. Es un secundario y casi nadie lo va a registrar. Lo único
+  que conviene evitar es alternarlos en réplicas consecutivas, que es donde el
+  salto sí se ve.
+- **Los sprites vienen con luz de estudio plana y los fondos con luz cálida.**
+  Se nota sobre todo con el comedor: el blanco de la camiseta de Raiha es más
+  frío que cualquier blanco de la habitación, y a Isanari le queda un contorno
+  rojizo en el brazo que no viene de ninguna luz de la escena. Se arregla con un
+  tinte cálido por escena aplicado a los sprites, no al fondo. No hay que
+  regenerar nada.
+- **El fondo del comedor está pintado con una cámara mucho más lejana que la de
+  los personajes.** Isanari de cuerpo entero queda a un palmo de la campana
+  extractora y encoge la habitación. En esa cocina conviene colocarlo hacia el
+  hueco de la puerta, o reservar ese fondo para planos donde él no salga entero.
+- **Contradicción texto-imagen en la escena 2:** el narrador dice que Isanari se
+  sentó y el sprite está de pie. Se arregla cambiando el texto, no el asset.
+  Igual con la sonrisa: si el diálogo nombra que sonrió así, deja de ser un
+  fallo y pasa a ser un momento.
 
 ---
 
@@ -680,10 +882,22 @@ En orden, porque el primero desbloquea a los demás:
    y anotar cada cambio de tono.
 2. Generar los CG de Yotsuba e Itsuki para completar la escena de la
    presentación.
-3. Rehacer los sprites de Raiha e Isanari con el estándar del set (760 × 930,
-   línea de ojos en 199, IPD 77,2).
+3. ~~Rehacer los sprites de Raiha e Isanari~~ — hecho: cuatro sprites a
+   760 × 930 con las filas de ojos de la tabla de alturas.
 4. Decidir el tono de pelo de Miku —CG o sprite— y unificar.
-5. Opcional: `cg_maruo_espaldas` para el cierre de la escena 6.
-6. Opcional: regenerar a Itsuki en vertical con las rodillas visibles y rehacer
+5. Aplicar el tinte cálido por escena a los sprites, para que dejen de leerse
+   como pegados encima del fondo.
+6. Opcional: `cg_maruo_espaldas` para el cierre de la escena 6.
+7. Opcional: variante de tarde de `bg_instituto` y variante de noche de
+   `bg_departamento`. La segunda se resuelve con el tinte de `MatrixColor` sin
+   gastar créditos; la primera necesita la semilla del fondo actual.
+8. Opcional: regenerar a Itsuki en vertical con las rodillas visibles y rehacer
    el set completo para ganar pierna en las cinco. Es la única forma de subir
    el corte inferior, y cuanto más tarde se haga, más sprites hay que rehacer.
+
+### Guardar las semillas
+
+Lo único de todo este trabajo que no se puede recuperar después. Sin la semilla,
+volver a un encuadre ya aprobado cuesta tandas enteras. Conviene apuntarla junto
+al archivo —en el nombre o en una nota— para los sprites de Isanari y Raiha y
+para los fondos y CG rehechos.
