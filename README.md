@@ -116,19 +116,19 @@ criterio de desempate de toda la partida.
 
 ### Estructura del prólogo (7 escenas)
 
-1. **Casa de los Uesugi** — presentación de Futaro por lo que le falta.   ✅ Terminado
-   Deuda familiar, notas como única cosa que controla. Aparece Raiha.
-2. **La oferta** — Isanari propone el trabajo de tutor. Primer menú cosmético.  ✅ Terminado
-3. **Instituto Asaba** — profesor felicita por el examen; primer roce con  ✅ Terminado
-   Itsuki (asiento y bento); azotea. Segundo menú cosmético.
-4. **Camino al departamento** — Futaro calcula mal las premisas.  ✅ Terminado
-5. **La revelación** — conoce a las cinco. Orden: Ichika, Nino, Miku,  ✅ Terminado
+1. **Casa de los Uesugi** — presentación de Futaro por lo que le falta.   
+   Deuda familiar, notas como única cosa que controla. Aparece Raiha. ✅ Terminado.
+2. **La oferta** — Isanari propone el trabajo de tutor. Primer menú cosmético.  ✅ Terminado.
+3. **Instituto Asaba** — profesor felicita por el examen; primer roce con 
+   Itsuki (asiento y bento); azotea. Segundo menú cosmético.  ✅ Terminado.
+4. **Camino al departamento** — Futaro calcula mal las premisas.  ✅ Terminado.
+5. **La revelación** — conoce a las cinco. Orden: Ichika, Nino, Miku,  
    Yotsuba, e Itsuki de última (cambio deliberado respecto al anime, para que
-   el prólogo cierre con golpe en vez de con enumeración).
-6. **El contrato** — Maruo. Aparece por primera vez la palabra «despedido», ✅ Terminado
-   semilla narrativa del Final Malo.
-7. **El primer intento** — clase fallida. Cada hermana se escapa a su manera. ✅ Terminado
-   Tercer menú cosmético. Cierra en fracaso, no en victoria.
+   el prólogo cierre con golpe en vez de con enumeración). ✅ Terminado.
+6. **El contrato** — Maruo. Aparece por primera vez la palabra «despedido», 
+   semilla narrativa del Final Malo. ✅ Terminado.
+7. **El primer intento** — clase fallida. Cada hermana se escapa a su manera. 
+   Tercer menú cosmético. Cierra en fracaso, no en victoria. ✅ Terminado.
 
 Termina con `jump cap1_inicio`.
 
