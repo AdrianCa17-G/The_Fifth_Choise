@@ -1,8 +1,10 @@
 # The Fifth Choice — Estado del proyecto
 
 Documento de contexto para retomar el desarrollo en una conversación nueva.
-Última actualización: sprites de Isanari y Raiha cerrados, retrato familiar
-unificado, y siete CG y fondos regenerados y pasados al estándar del set.
+Última actualización: **prólogo cerrado por completo**. Sprites de las cinco
+hermanas regenerados y limpiados, transforms reescritos (había un bug grave de
+posición), guion corregido en continuidad y voz de personaje, y capa de audio
+montada entera: 8 pistas, ambiente y 11 efectos con sus cues en el guion.
 
 ---
 
@@ -29,7 +31,7 @@ muestra el rostro**. En escenas grupales aparece como silueta oscura.
 | Archivo | Estado |
 |---|---|
 | `00_definiciones.rpy` | ✅ Terminado |
-| `01_prologo.rpy` | ✅ Terminado (7 escenas) |
+| `01_prologo.rpy` | ✅ Terminado (7 escenas, arte, sonido y revisión de guion) |
 | `02_capitulo1.rpy` | ⬜ Pendiente — siguiente tarea |
 | `03_capitulo2.rpy` | ⬜ Pendiente |
 | `04_capitulo3.rpy` | ⬜ Pendiente |
@@ -134,9 +136,38 @@ Termina con `jump cap1_inicio`.
 
 ### Anzuelos sembrados para recoger después
 
-- **Miku**: Futaro alcanza a leer el lomo de un libro sobre el período Sengoku.
-  Gancho listo para su ruta en el Capítulo 1.
+- **Miku**: Futaro comenta mal el libro de Sengoku y ella lo corrige sin
+  levantar la vista — «es logística, las batallas las gana quien mueve el
+  arroz» — y después se esconde detrás del libro al darse cuenta de que ha
+  hablado. Cuatro líneas que encienden al personaje y plantan su ruta. Antes el
+  libro era solo un objeto que señalaba el narrador.
 - **Itsuki**: el reencuentro en el departamento ya establece la rivalidad.
+- **Nino**: «el último duró cuatro días, también entró diciendo que venía a
+  trabajar». Es la única vez del prólogo en que tiene razón y Futaro no sabe
+  qué contestar.
+- **Yotsuba**: su «…¿Verdad?» medio tono más bajo, con el rebote inmediato a
+  «¡Digo, claro que sí!». La primera grieta de la armadura.
+
+### Revisión de guion ya aplicada (no volver atrás)
+
+- **Isanari no revela el número.** Dice «un tutor privado para su familia» y
+  «hasta la graduación». Antes decía «sus hijas» y «hasta que se gradúen», en
+  plural, y luego Futaro planificaba para «un alumno»: era un agujero, no un
+  cálculo mal hecho. El «cinco veces la tarifa» es ahora la única pista.
+- **«Quintillizas» se dice después de que entre la quinta.** Antes Nino lo
+  soltaba con cuatro en pantalla y desactivaba el remate de «Cinco».
+- **Futaro no se disculpa en el prólogo** y no grita insultos. Donde antes
+  decía «lamento lo de esta mañana» ahora reafirma su postura, y el «¡niña
+  malcriada!» pasó a un «baja la voz, ni siquiera sé tu nombre» dicho en frío.
+  Su disculpa hay que guardarla para el arco, no gastarla el primer día.
+- **El monólogo del instituto se reescribió** porque el fondo está vacío: ahora
+  llega antes que nadie y prefiere los pasillos vacíos. Antes describía
+  pasillos llenos de alumnos que no están en pantalla.
+- **El reproche repetido de Itsuki se fusionó en una línea.** Se contaba tres
+  veces: aula, azotea y departamento.
+- **Raiha tiene un registro bajo** además del regañón, e Isanari genera
+  fricción con Futaro. Antes ella solo gritaba y él no producía ninguna
+  reacción en su hijo.
 
 ### Personajes secundarios definidos en este archivo
 
@@ -301,23 +332,33 @@ fila de la línea de ojos — ver más abajo.
 | Raiha | Un poco molesta | `raiha_regano.png` |  ✅ Terminado | 760 x 930 px |
 | Isanari | Sonrisa leve | `isanari_sonrisa.png` |  ✅ Terminado | 760 x 930 px |
 | Isanari | Neutral | `isanari_neutral.png` |  ✅ Terminado | 760 x 930 px |
-| Itsuki | Brazos cruzados (se usa como «seria») | `itsuki_neutral.png` |  ✅ Terminado | 760 x 930 px |
-| Itsuki | Neutral real | `itsuki_neutral2.png` |  ✅ Terminado | 760 x 930 px |
-| Itsuki | Sonriendo | `itsuki_sonrisa.png` |  ✅ Terminado | 760 x 930 px |
-| Itsuki | Sorpresa | `itsuki_sorpresa.png` |  ✅ Terminado | 760 x 930 px |
-| Itsuki | Timida | `itsuki_timida.png` |  ⚠️ Revisar | 760 x 930 px (24 px corta) |
-| Yotsuba | Sonriendo | `yotsuba_sonrisa.png` |  ✅ Terminado | 760 x 930 px |
+| Itsuki | Brazos cruzados (se usa como «seria») | `itsuki_molesta.png` |  ✅ Terminado | 760 x 930 px |
+| Itsuki | Neutral real | `itsuki_neutral.png` |  🔄 Rehecho | 760 x 930 px |
+| Itsuki | Sonriendo | `itsuki_sonrisa.png` |  🔄 Rehecho | 760 x 930 px |
+| Itsuki | Sorpresa | `itsuki_sorpresa.png` |  🔄 Rehecho | 760 x 930 px |
+| Itsuki | Timida | `itsuki_timida.png` |  🔄 Rehecho | 760 x 930 px |
+| Yotsuba | Sonriendo | `yotsuba_sonrisa.png` |  🔄 Rehecho | 760 x 930 px |
 | Miku | Aburrida | `miku_aburrida.png` |  ✅ Terminado | 760 x 930 px |
-| Nino | Neutral | `nino_neutral.png` |  ✅ Terminado | 760 x 930 px |
-| Ichika | Neutral | `ichika_neutral.png` |  ✅ Terminado | 760 x 930 px |
-| Ichika | Sonriendo | `Ichika_sonrisa.png` |  ✅ Terminado | 760 x 930 px |
+| Nino | Neutral | `nino_neutral.png` |  🔄 Rehecho | 760 x 930 px |
+| Ichika | Neutral | `ichika_neutral.png` |  🔄 Rehecho | 760 x 930 px |
+| Ichika | Sonriendo | `ichika_sonrisa.png` |  🔄 Rehecho | 760 x 930 px |
 | Profesor / Madre / Maruo | 0 — no necesitan sprite | | ✅ Terminado | |
 
-Los sprites que dicen neutral son los sprites base de cada quintilliza, 
+Los sprites que dicen neutral son los sprites base de cada quintilliza,
 algunas no tienen porque solo aparecieron poco tiempo en pantalla o sus
-dialogos no encajarian con sus poses neutrales, ademas itsuki tiene un 
+dialogos no encajarian con sus poses neutrales, ademas itsuki tiene un
 sprite que aun no se ha utilizado "Itsuki Timida", debido al prologo, no
 se encontró un momento exacto donde utilizarlo.
+
+**Se resolvió la confusión `neutral` / `neutral2` de Itsuki.** El de brazos
+cruzados pasó a llamarse `itsuki_molesta` y el neutral real ocupa
+`itsuki_neutral`. El alias viejo `itsuki seria` ya no existe en el guion.
+
+**Criterio adoptado para expresiones nuevas: generar solo contra guion
+escrito**, nunca contra suposición. `itsuki_timida` se generó antes de tener la
+escena y se quedó sin usar todo el prólogo. Las expresiones que falten a Nino,
+Miku y Yotsuba se harán cuando el Capítulo 1 esté escrito y se sepa qué tonos
+pide.
 
 Como las cinco tienen la misma cara, el jugador las distingue por silueta.
 Comprobar que peinado y accesorio se leen al 30% de tamaño.
@@ -341,11 +382,31 @@ quintillizas. Escalas aplicadas a partir del IPD crudo medido:
 
 | Render | IPD crudo | Escala |
 |---|---|---|
-| `nino_neutral` (referencia del set) | 74,2 | 1,040 |
 | `miku_aburrida` | 73,9 | 1,045 |
-| `yotsuba_sonrisa` | 70,6 | 1,093 |
-| `ichika` (ambas) | 68,1 | 1,133 |
-| `itsuki` (brazos cruzados) | 60,8 | 1,270 |
+| `itsuki_molesta` (brazos cruzados) | 60,8 | 1,270 |
+| `yotsuba_sonrisa` 🔄 | 76,4 | **1,011** |
+| `nino_neutral` 🔄 | 71,3 | 1,083 |
+| `ichika_neutral` 🔄 | 68,1 | 1,134 |
+| `ichika_sonrisa` 🔄 (ojos cerrados) | 105,8 | 0,730 |
+| `itsuki_sorpresa` 🔄 | 63,9 | 1,209 |
+| `itsuki_timida` 🔄 | 61,6 | 1,254 |
+| `itsuki_sonrisa` 🔄 | 53,9 | 1,431 |
+| `itsuki_neutral` 🔄 | 48,7 | **1,584** |
+
+Los marcados 🔄 se renormalizaron desde el render original. **Generar en
+vertical 768 × 1280 importa mucho**: Yotsuba y Nino vinieron así y salieron a
+escala 1,01 y 1,08, prácticamente sin reescalar. Las cuatro de Itsuki vinieron
+apaisadas a 1280 × 720 y necesitaron hasta 1,58 de ampliación, con la pérdida
+de nitidez que eso implica. Se compensa con realce con umbral, pero la
+resolución perdida no vuelve.
+
+**Ojos cerrados: el arco del `^_^` engaña.** En `ichika_sonrisa` los centroides
+de los arcos quedan más separados que las pupilas y sobreestiman el IPD un 10%,
+así que la cabeza salía pequeña. Se calibró comparando el perfil de silueta del
+pelo contra su propio neutral, hasta dar con 0,730. Si vuelve a pasar, ese es
+el método: medir el ancho de la silueta del pelo en varias filas alrededor de
+la línea de ojos y ajustar hasta que coincida con otra expresión del mismo
+personaje.
 
 El margen superior de 199 px lo fija el lazo de Yotsuba, el accesorio más alto
 del elenco. El corte inferior lo fija Itsuki: su render vino apaisado en
@@ -409,6 +470,57 @@ Todo lo demás se conserva. Ese margen no es un capricho: los dientes de Isanari
 miden 250,1 y el brillo del ojo de Raiha 250,5, y con el umbral en 250 los dos
 salían transparentes. Se veían como agujeros negros sobre fondo oscuro.
 
+**CORRECCIÓN IMPORTANTE: la pureza sola NO basta.** Con Ichika la regla de
+arriba borraba su camisa entera. Su camisa blanca mide 250,9–254,5 de pureza,
+exactamente lo mismo que el fondo, y los dos parches del pecho (4151 y 3913 px)
+cumplían «≥ 250,5 y más de 1000 px» al pie de la letra.
+
+El discriminante que sí funciona es **el color del contorno, no la pureza del
+hueco**. Un hueco de fondo de verdad está rodeado de piel o pelo, que son
+cálidos; la ropa blanca y sus sombras son frías. La regla definitiva es que un
+hueco encerrado se borra solo si cumple **las dos** condiciones:
+
+- **Pureza media ≥ 253,5**, y
+- **calidez del contorno (r − b) ≥ 20**.
+
+Separación medida: hueco de pelo de Itsuki 254,8 / +66. Camisa de Ichika 253,7
+/ +4. Dientes 250,9, protegidos por el filtro de pureza. No está al límite.
+
+**Y el filtro de lineart del contorno se mide por luminancia, no por canal
+mínimo.** Descartar la lineart con `min(r,g,b) > 120` parece razonable hasta
+que llega el pelo rojo de Itsuki, cuyo canal mínimo ronda 70–111: el contorno
+entero se descartaba, la prueba abortaba sin decidir y le quedaba un parche
+blanco de 3445 px en el pelo, visible a leguas en el juego. Con `media > 70` se
+quita la lineart negra sin tocar el pelo saturado. Área mínima del hueco: 40 px.
+
+**Excepción conocida — Yotsuba.** Su paleta es amarillo, naranja y verde, así
+que su cuello blanco está pegado al chaleco amarillo y mide cálido igual que el
+pelo. La regla no puede distinguirlos y le comió una tira del cuello. Sobre un
+PNG ya recortado hay que usar `--solo-halo`; desde el render original sí
+funciona bien, porque ahí solo un hueco cumple las dos condiciones.
+
+#### Halo blanco del contorno
+
+Aparte de los huecos, hay un segundo defecto: el **halo**. Los recortes binarios
+dejan los píxeles del borde con el blanco del fondo mezclado dentro del color, y
+al componer sobre el fondo oscuro del apartamento se ve un contorno lechoso
+alrededor del pelo. Yotsuba lo tenía: sus píxeles de borde promediaban RGB
+(206, 190, 183).
+
+Se corrige por **desmatteado**. El píxel guarda `C = a·C_real + (1−a)·255`, así
+que se despeja `C_real`. No hace falta filtrar por color: si el píxel es blanco
+de verdad, quitarle el blanco devuelve blanco y no cambia nada. Solo se excluyen
+los alphas por debajo de 0,28, donde la división amplifica el ruido.
+
+**Y al escalar hay que premultiplicar el alpha.** Si se reescala el RGBA sin
+premultiplicar, Lanczos mezcla el RGB de los píxeles transparentes —que sigue
+siendo el blanco del fondo— dentro del borde. Ya está corregido en el script.
+
+Un aviso para no perder el tiempo: **la línea clara fina que se ve entre los
+mechones no es halo, es el dibujo**. Escaneando el render crudo aparece un
+píxel en (207, 168, 169) entre dos valores de rojo oscuro. Es la separación de
+mechones que dibuja el modelo. Si se intenta quitar, se rompe el pelo.
+
 **Recorte de fondo.** El blanco de PixAI se quita por flood fill desde el
 borde, pero además hay que eliminar los huecos de fondo *encerrados* entre
 mechones de pelo: quedan opacos y aparecen como manchas blancas sobre el fondo
@@ -433,6 +545,37 @@ detección falla: hay que pasar `--ojos x1,y1,x2,y2` copiando las coordenadas de
 las pupilas de otra versión del mismo render. Las tres constantes están al
 inicio del archivo y no se tocan.
 
+Opciones añadidas: `--eje` para forzar el eje del cuerpo, `--huecos x,y;x,y`
+para marcar a mano huecos de fondo por punto semilla, y `--sin-huecos` para
+desactivar el borrado automático (el modo seguro para Yotsuba).
+
+**Detección de ojos — dos trampas resueltas.** El umbral del azul subió a
+`b−r > 60` y `b−g > 50`, y la búsqueda se restringe al 42% superior de la
+figura. Con el umbral flojo, los brillos azules del **blazer de Ichika** son
+más grandes que su iris y ganaban por tamaño: su neutral medía IPD 184 en vez
+de 68. El iris está en b−r ≈ 80 y el blazer en 47, así que la separación es
+amplia.
+
+**Extensión inferior automática.** Si el render venía cortado por el borde del
+frame y al normalizar el contenido se queda hasta 30 px corto, el script
+prolonga la última fila. Ahí solo hay pierna y el corte lo marca el encuadre,
+no el personaje. Es lo que resolvió el problema de los 24 px de `itsuki_timida`.
+
+#### Herramienta: `limpiar_halo.py`
+
+Trabaja sobre un sprite **ya normalizado** (760 × 930) sin tocar escala ni
+posición. Hace dos cosas: el desmatteado del contorno y el borrado de huecos
+encerrados con la regla del contorno cálido.
+
+```
+python limpiar_halo.py entrada.png salida.png
+python limpiar_halo.py entrada.png salida.png --solo-halo
+```
+
+Se usa cuando el sprite ya está en el juego y no se tiene el render original.
+Si se tiene el render, es mejor volver a pasar `normalizar_sprite.py`: el
+resultado es más limpio porque trabaja antes de recortar y escalar.
+
 *Nota para un posible sprite de Maruo:* la detección busca **azul** y él tiene
 los ojos negros, así que habría que pasarle `--ojos` a mano. A cambio,
 normalizarlo por IPD lo dejaría automáticamente más alto que las hermanas (un
@@ -441,52 +584,96 @@ conviene para la escena del contrato.
 
 ---
 
-### Transiciones
+### Transiciones y transforms
 
-`pj(x)` . Coloca el sprite anclado al borde inferior en la posición horizontal
-que se le pase; sin argumento cae en el centro (`x=0.5`). Como las cinco
-comparten lienzo y anclaje, **un solo transform sirve para todas**, sin zoom ni
-offset por personaje:
+**Regla del archivo: todo `show` lleva SIEMPRE su posición**, aunque solo
+cambie el tinte. Esto no es estilo, es lo único que impide que vuelva un bug
+que costó una sesión entera encontrar.
+
+#### El bug de los sprites encimados
+
+`at` **reemplaza el transform entero, no lo suma.** Cuando se escribía
+`show nino at habla`, no se le añadía el tinte a la posición: se la quitaba.
+Ren'Py intenta salvarlo heredando el estado del transform anterior, y lo que
+hereda es el estado **en ese instante exacto**.
+
+El transform de movimiento usaba `ease t xcenter x` con `t = 1` segundo. Si el
+jugador hacía clic a los 200 ms, el sprite iba por el 20% del recorrido, el
+siguiente `show ... at habla` congelaba ese 20% y ya no se movía nunca más. De
+ahí los sprites encimados y las regresiones rotas.
+
+La causa de fondo es una asimetría de Ren'Py que conviene tener grabada:
+
+> **Un clic salta una transición a su estado final. Un clic NO adelanta una
+> animación ATL.** Por eso el movimiento tiene que ser una transición, nunca un
+> `ease` dentro del transform.
+
+#### Los transforms actuales
 
 ```renpy
+define X_ICHIKA  = 0.13
+define X_NINO    = 0.31
+define X_MIKU    = 0.50
+define X_YOTSUBA = 0.69
+define X_ITSUKI  = 0.87
+
 transform pj(x=0.5):
     xanchor 0.5
     yanchor 1.0
     xpos x
     ypos 1.0
+    zoom 1.0
+    matrixcolor TintMatrix("#ffffff")
+
+transform pj_habla(x=0.5):
+    xanchor 0.5
+    yanchor 1.0
+    xpos x
+    ypos 1.0
+    ease 0.25 zoom 1.01 matrixcolor TintMatrix("#ffffff")
+
+transform pj_calla(x=0.5):
+    xanchor 0.5
+    yanchor 1.0
+    xpos x
+    ypos 1.0
+    ease 0.25 zoom 0.99 matrixcolor TintMatrix("#a0a0a0")
+
+define mover = MoveTransition(0.8)
 ```
 
-Valores que reparten bien a las cinco en la escena de presentación:
+`pj_mueve`, `habla` y `calla` **ya no existen**. Reafirmar la posición absoluta
+en cada `show` hace que una transición interrumpida se autocorrija en la línea
+siguiente.
+
+#### Movimientos y entradas
 
 ```renpy
-show ichika neutral at pj(0.13)
-show nino neutral at pj(0.31)
-show miku aburrida at pj(0.5)
-show yotsuba sonrisa at pj(0.69)
-show itsuki seria at pj(0.87)
+show ichika at pj(0.25)
+with mover
+
+show nino neutral at pj(0.75)
+with dissolve
 ```
 
-`pj_mueve` . Hace que el sprite del personaje se mueva con una transicion
-desde una coordenada hasta otra coordenada, generalmente en x, en un
-determinado tiempo, estas coordenas las coloca el jugador.
+Primero el desplazamiento de quien ya estaba, después la entrada del nuevo con
+`dissolve`. Se encadenan solas sin clic de por medio.
 
-`habla` . Hace que el sprite del personaje se agrande un poco su zoom,
-haciendo alusion a que esta hablando.
+**Trampa de `MoveTransition`:** sus parámetros `enter` y `leave` esperan un
+**transform con la posición de partida** (`offscreenright` y similares), no una
+transición. Pasarles `dissolve` no falla al cargar el juego — revienta en
+tiempo de render con `AttributeError: 'NoneType' object has no attribute
+'style'`, ya dentro de la escena. Por eso `mover` va pelado y las entradas se
+resuelven aparte.
 
-`calla` . Hace que el sprite del personaje se tiña de una sombra negra y baje
-un poco su zoom, haciendo alusion a que no esta hablando.
+Para salidas, `hide <tag>` con `moveoutleft`. Antes se movía el sprite a
+`xcenter -0.5` y se quedaba cargado fuera de pantalla.
 
-`with dissolve`. Crea una transicion suave para cambio de escenas, ya sea
-en BGs o en CGs.
+#### Otras transiciones
 
-` Definir dissolve`. Dura 1.2 segundos
-define disolucion_lenta = Dissolve(1.2).
-
-`with fade`. Realiza un fundido en tres pasos secuenciales, ya sea
-en BGs o en CGs.
-
-OJO. Aqui hay que analizar en donde usar dissolve y en donde fade, ya que las
-puse al azar, segun yo están todas bien pero no se si están con el uso adecuado.
+`with dissolve` para cambios de escena entre BG y CG. `with fade` para saltos de
+tiempo y cortes duros. `disolucion_lenta = Dissolve(1.2)` sigue definida pero ya
+no se usa en el prólogo.
 
 ---
 
@@ -530,7 +717,15 @@ Los LoRA de la comunidad no son todos del mismo linaje y ahí se pierden crédit
 
 | Personaje | LoRA | Base | Fuerza |
 |---|---|---|---|
+| Ichika | 中野一花 サンプル(アニメ)Tsubaki.2バージョン | **Tsubaki.2 nativo** | 0.8 |
+| Nino | 中野二乃 アニメ(サンプル)Tsubaki.2バージョン | **Tsubaki.2 nativo** | 0.8 |
+| Miku | 中野三玖 アニメ(サンプル)Tsubaki.2バージョン | **Tsubaki.2 nativo** | 0.8 |
+| Yotsuba | 中野四葉 サンプル(アニメ)Tsubaki.2バージョン | **Tsubaki.2 nativo** | 0.8 |
+| Itsuki | 中野五月 サンプル(アニメ)Tsubaki.2バージョン | **Tsubaki.2 nativo** | 0.8 |
 | Raiha | «Raiha Uesugi - The Quintessential Quintuplets», trigger `raihau, hair bow, striped shirt, blue overalls` | Illustrious XL → usar Haruka v2 | 0.7 – 0.85 |
+
+**Las cinco hermanas tienen LoRA propio y nativo de Tsubaki.2.** No hace falta
+cambiar de modelo base ni subirles la fuerza, al contrario que con Raiha.
 
 Con LoRA de personaje **hay que quitar la redundancia del prompt**, no sumarla:
 competir con él es lo que rompe el parecido. Y ojo, el de Raiha trae los ojos
@@ -546,9 +741,27 @@ sobra.
 
 | Caso | LoRA de serie | LoRA de personaje |
 |---|---|---|
-| Personaje individual (sprite o CG) | 0.3 | 0.7 – 0.8 |
+| Sprite individual de una hermana | **Ninguno** | 0.8 |
+| CG individual | 0.3 | 0.7 – 0.8 |
 | CG de grupo con las cinco | 0.3 | Ninguno |
 | Maruo u otro adulto masculino | 0.1 | Ninguno |
+
+**Corrección respecto a la versión anterior: los sprites de las hermanas se
+generan SOLO con su LoRA de personaje**, sin el de serie. Es lo que se venía
+haciendo en la práctica y lo que mantiene la consistencia del set; añadir el de
+serie ahora metería un cambio de estilo justo en la hermana que se intenta
+emparejar. Encaja además con lo ya sabido: el LoRA de personaje trae su propio
+estilo dentro y el de serie encima solo suma riesgo.
+
+**Las cinco quintillizas SÍ tienen LoRA propio**, y además nativo de Tsubaki.2,
+no de Illustrious. Enganchan a su valor nominal sin tener que subirles la fuerza
+para compensar, al contrario que el de Raiha. Con LoRA de personaje nativo, la
+semilla deja de ser crítica para mantener el parecido entre expresiones —
+conviene apuntarla igual, pero ya no obliga a rehacer sets enteros.
+
+**Tsubaki.2 no tiene campo negativo ni ajustes avanzados** salvo la semilla. No
+hay pasos ni CFG que tocar, así que el prompt es la única palanca: de ahí que
+haya que meter tokens redundantes en la expresión y el encuadre.
 
 - **0.3 es el techo del LoRA de serie**, no ~0.65 como decía la versión
   anterior. Por encima aparece un artefacto constante: una **banda blanca sobre
@@ -771,13 +984,14 @@ franjas limpias de las que copiar. Para eso hace falta inpainting generativo
 
 ### Herramientas de post (`herramientas/`, fuera de `game/`)
 
-Tres scripts de Python, todos con `pillow`, `numpy` y `scipy`. No son scripts de
+Cuatro scripts de Python, todos con `pillow`, `numpy` y `scipy`. No son scripts de
 Ren'Py y no deben vivir dentro de `game/`.
 
 | Script | Qué hace |
 |---|---|
-| `normalizar_sprite.py` | Recorta el fondo y normaliza un sprite de hermana al estándar del set (760 × 930, ojos en 199, IPD 77,2). Con los ojos cerrados hay que pasarle `--ojos x1,y1,x2,y2`. |
-| `normalizar_extra.py` | Lo mismo para Isanari y Raiha, con sus filas de ojos propias y el modo por altura de Raiha. Incluye la regla de pureza para los huecos blancos. |
+| `normalizar_sprite.py` | Recorta el fondo y normaliza un sprite de hermana al estándar del set (760 × 930, ojos en 199, IPD 77,2). Opciones: `--ojos`, `--eje`, `--huecos`, `--sin-huecos`. |
+| `limpiar_halo.py` | Sobre un sprite **ya normalizado**: quita el halo blanco del contorno por desmatteado y borra huecos encerrados. `--solo-halo` para Yotsuba. |
+| `normalizar_extra.py` | Lo mismo para Isanari y Raiha, con sus filas de ojos propias y el modo por altura de Raiha. |
 | `escalar_cgs.py` | Pasa un lote de CG y fondos a 1920×1080 con Lanczos y WebP 95. Aplica realce de nitidez **solo a las fuentes JPEG** y con umbral. |
 
 **Detección de ojos:** los scripts buscan **iris azul**. Isanari y Raiha los
@@ -789,6 +1003,136 @@ saturación media. Los que salgan muy por debajo se corrigen en el escalado, no
 regenerando — salvo que el contenido justifique el color bajo (una puerta de
 madera o un portal de hormigón no tienen color que sacar y forzarlo solo mete
 ruido).
+
+---
+
+## 9 bis. Audio — montado y cerrado
+
+Ocho pistas, un ambiente y once efectos. Los cues ya están escritos en
+`01_prologo.rpy`; solo falta ir soltando archivos en las carpetas.
+
+### Estructura de carpetas y nombres
+
+```
+game/audio/bgm/   hogar, cena, cotidiano, incomodo,
+                  extraneza, caos, contrato, derrota   (.ogg)
+game/audio/       amb_viento.ogg
+                  sfx_*.mp3   (11 efectos)
+```
+
+Los BGM se declaran con nombre corto (`define audio.hogar = "audio/bgm/hogar.ogg"`)
+porque la carpeta ya lleva el prefijo. Los efectos mantienen `sfx_`.
+
+### Las ocho pistas elegidas
+
+| Cue | Pista | Fuente |
+|---|---|---|
+| `hogar` | ピアノ34「静寂の世界へ」 | 魔王魂 |
+| `cena` | アコースティック04 | 魔王魂 |
+| `cotidiano` | ピアノ25「Cookie Cookie」 | 魔王魂 |
+| `incomodo` | Zany Escape (Kobat) | DOVA |
+| `extraneza` | 日曜の午後 (KK) | DOVA |
+| `caos` | Busy As A Bee (ハモおた) | DOVA |
+| `contrato` | Night Shade Story (shimtone) | DOVA |
+| `derrota` | ピアノ09 | 魔王魂 |
+| `amb_viento` | 風 孤独感 | Springin' Sound Stock |
+
+**`hogar` suena exactamente dos veces en todo el prólogo**: bajo el retrato
+familiar y en «Bien. Que sea difícil». Es el tema de Futaro. Si sonara también
+durante la cena dejaría de ser un tema y sería fondo — por eso existe `cena`
+como pista aparte.
+
+### Los cuatro silencios
+
+Son la parte que más rinde y la que más se olvida:
+
+- **El monólogo de apertura.** Hace que la entrada de `hogar` signifique algo.
+- **`cg_manija_edificio`.** Dos segundos de nada antes de la revelación.
+- **Antes de que aparezca Maruo**, con `fadeout 0.3`. Corte seco: aquí el juego
+  deja de ser una comedia.
+- **Desde que sale del edificio hasta «Bien. Que sea difícil».** «Despedido.»
+  cae en seco. La música vuelve cuando decide no rendirse, no antes.
+
+### Reparto medido de cada pista
+
+Se midió cuántas líneas de diálogo cubre cada cue, y ahí aparecieron dos errores
+que no se ven leyendo el guion: `caos` sonaba **5 líneas** (una pista de 2:52
+desperdiciada) y había un `cotidiano` de **6 líneas** que no daba tiempo ni a
+entrar con su propio fundido. Corregido:
+
+| Cue | Líneas |
+|---|---|
+| extraneza | 73 |
+| cena | 52 |
+| caos | 46 |
+| azotea (solo viento) | 38 |
+| incomodo | 30 |
+| derrota | 26 + 25 en silencio |
+| contrato | 21 |
+| hogar (inicio) | 19 |
+| cotidiano ×2 | 12 y 11 |
+| hogar (final) | 7 |
+
+Tres decisiones de montaje que salieron de esa medición:
+
+- **`caos` arranca en el portazo de Itsuki**, a la vez que el golpe, no después
+  de «Quintillizas». Antes `extraneza` cargaba con 114 líneas y con seis ánimos
+  distintos.
+- **La azotea va sin música, solo viento.** Ahí los dos están callados sin saber
+  qué decirse: no es la bronca del aula, es lo contrario. Resolvió de paso que
+  `incomodo` tuviera que servir a dos escenas opuestas, y sin gastar una pista.
+- **`derrota` se corta antes del portazo de Nino.** Las cuatro puertas suenan
+  sobre silencio, que pesa más, y la pista deja de dar cinco vueltas.
+
+### Los once efectos
+
+Todos de 効果音ラボ salvo el viento. Términos de búsqueda en japonés, que es lo
+único que entiende su buscador:
+
+| Momento | Buscar |
+|---|---|
+| Papel sobre la mesa (esc. 2) | `書類を置く` |
+| Timbre del instituto | `学校のチャイム` |
+| Silla del aula | `椅子を引く` |
+| Interfono del edificio | `インターホン` |
+| Manija antes de entrar | `ドアノブ` |
+| Puerta al abrir Ichika | `ドアを開ける` |
+| Yotsuba corriendo | `走る足音` |
+| Portazo de Itsuki | `ドアを勢いよく開ける` |
+| Bolsa del supermercado | `レジ袋` |
+| Repartir la hoja | `紙をめくる` |
+| Las cuatro puertas (esc. 7) | `ドアを閉める` |
+
+**Volúmenes ya ajustados en el guion**: 0,4 para papel y silla; 0,6–0,7 para
+puertas y timbres; **1,0 solo para el portazo de Itsuki**, que es a propósito el
+sonido más alto del prólogo. Las cuatro puertas de la escena 7 usan el mismo
+archivo sin variar nada: la repetición idéntica es lo que hace que la última
+suene más sola que la primera.
+
+### Licencias — resumido
+
+| Sitio | Condición |
+|---|---|
+| 魔王魂 | CC BY 4.0. Crédito **obligatorio**: `音楽：魔王魂`. Autoriza el cifrado para creación de juegos |
+| DOVA-SYNDROME | Uso en juegos permitido. Gestionan su propio Content ID y no reclaman. **Pasa a llamarse OpenTracks el 15/09/2026** |
+| PeriTune | Crédito opcional. Prohibido registrar en Content ID |
+| 効果音ラボ | Sin crédito, informe ni enlace. Empaquetar en el juego permitido |
+| Springin' Sound Stock | Crédito opcional. Uso comercial y venta de juegos permitidos |
+
+**Apuntar título y autor de cada pista según se descarga**, no la URL —
+DOVA cambia de nombre en septiembre y los enlaces pueden romperse.
+
+### Notas técnicas
+
+- **OGG para todo lo que cicle**, MP3 vale para los efectos puntuales. El MP3
+  mete un silencio en el punto de bucle; un golpe de puerta no cicla, un viento
+  sí.
+- `renpy.music.register_channel("ambiente", "sfx", loop=True)` está en el
+  `init python` del prólogo. Sin ese canal, el viento cortaría la música.
+- **El viento se alargó a mano en Audacity.** El original dura 4 s y un ciclo
+  tan corto se reconoce enseguida. Se repitió 7 veces hasta 35 s y se le
+  aplicaron fundidos de un segundo en los extremos. Queda un bajón de volumen
+  cada 35 s, imperceptible porque va por debajo del diálogo.
 
 ---
 
@@ -808,6 +1152,17 @@ ruido).
 - **Al reemplazar un sprite hay que borrar `game/cache`** o Ren'Py sigue
   mostrando la versión vieja. Es el equivalente del `.rpyc` para las imágenes:
   pasas media hora normalizando un sprite y en pantalla no cambia nada.
+- **`at` reemplaza el transform entero, no lo suma.** Ver la sección de
+  transiciones. Es la trampa más cara que ha dado este proyecto.
+- **Un clic salta una transición; un clic NO adelanta una animación ATL.** De
+  ahí que el movimiento tenga que ser transición y no `ease`.
+- **`MoveTransition(enter=...)` pide un transform de posición, no una
+  transición.** Y no falla al cargar: revienta en tiempo de render, ya dentro
+  de la escena, con un `AttributeError` que no menciona el parámetro culpable.
+- **Renombrar un `define audio.X` obliga a renombrar todos sus `play`.** Al
+  reorganizar las carpetas se acortaron tres `play music` sin tocar sus
+  `define`, y el archivo quedó a medias: cinco pistas con prefijo y tres sin él,
+  apuntando a nombres inexistentes.
 
 ---
 
@@ -822,19 +1177,16 @@ ruido).
 - **Composición del comedor**: la mesa está centrada y adelantada. Los sprites
   hay que colocarlos a los lados (`xalign 0.2` / `0.8`) o quedan plantados
   encima del mueble.
-- **`itsuki_timida` quedó 24 px corta por abajo** (su render venía cortado más
-  arriba): con `yanchor 1.0` flota ese pelín respecto a las otras cuatro.
+- ~~**`itsuki_timida` quedó 24 px corta**~~ — resuelto. El script prolonga la
+  última fila cuando el render venía cortado por el borde del frame.
 - **El pelo de Miku no coincide entre CG y sprite.** En los CG quedó castaño
   oscuro tras la corrección en Gemini; el sprite sigue en castaño claro. Hay
   que decidir cuál manda, porque si no la inconsistencia se arrastra a todo el
   juego.
-- **Nombres de sprites de Raiha.** El problema del cambio de ropa habla de
-  `raiha_sorprendida`, pero la tabla de sprites solo registra
-  `raiha_hablando` y `raiha_regano`. Antes de rehacerlos hay que fijar de una
-  vez qué expresiones existen y cómo se llaman.
-- **`Ichika_sonrisa.png` empieza por mayúscula**, contra la regla de la sección
-  10. Funciona en Windows y revienta al exportar a Linux o Android. Renombrar
-  ahora, que solo lo referencia el prólogo.
+- ~~**Nombres de sprites de Raiha**~~ — cerrado: `raiha_hablando` y
+  `raiha_regano`, nada más.
+- ~~**`Ichika_sonrisa.png` con mayúscula**~~ — resuelto al regenerarla:
+  `ichika_sonrisa.png`.
 - **Las gafas de Isanari cambian de sitio entre sus dos sprites**: caladas sobre
   los ojos en el `neutral`, subidas a la frente en la `sonrisa`. Decisión
   tomada: se asume. Es un secundario y casi nadie lo va a registrar. Lo único
@@ -850,10 +1202,30 @@ ruido).
   los personajes.** Isanari de cuerpo entero queda a un palmo de la campana
   extractora y encoge la habitación. En esa cocina conviene colocarlo hacia el
   hueco de la puerta, o reservar ese fondo para planos donde él no salga entero.
-- **Contradicción texto-imagen en la escena 2:** el narrador dice que Isanari se
-  sentó y el sprite está de pie. Se arregla cambiando el texto, no el asset.
-  Igual con la sonrisa: si el diálogo nombra que sonrió así, deja de ser un
-  fallo y pasa a ser un momento.
+- ~~**Contradicción texto-imagen en la escena 2**~~ — resuelto: el narrador ya
+  no dice que Isanari se sentó.
+- ~~**Composición del comedor**~~ — aplicado: Raiha e Isanari a 0,20 y 0,73, y
+  Raiha sola a 0,30.
+- **El corte inferior del set sigue fijado por Itsuki.** Sus cuatro renders
+  nuevos volvieron a venir apaisados en 1280 × 720. Nino y Yotsuba sí vinieron
+  verticales y se ve la diferencia de nitidez. Para subir el corte hay que
+  regenerar a Itsuki en vertical y rehacer las cinco.
+- **El lazo de Yotsuba viene cortado en el propio render**: hay verde en la fila
+  0 del PNG original de PixAI. No es la normalización. Para tenerlo entero hay
+  que regenerar con más margen arriba.
+- **La falda de `itsuki_neutral` es olivácea.** Color medio (92, 102, 74) frente
+  a (90, 118, 63) del resto del set. Alternar esa expresión con otra en la misma
+  escena hace que la falda cambie de tono en pantalla. Se corrige en post con un
+  ajuste de tono sobre la región verde, sin regenerar.
+- **Maruo promete una condición que el juego no ejecuta.** Dice que si una
+  hermana reprueba, despedido en el acto. Pero el Final Malo se dispara porque
+  ninguna llegó a 10 puntos de afinidad: son dos condiciones distintas. Hay que
+  decidirlo antes de escribir el Capítulo 1, porque cambia lo que significan los
+  puntos. Lo más limpio es que la afinidad represente «logró llegar a ellas y
+  por eso estudian», y narrar el Final Malo como el despido que Maruo anunció.
+- **Itsuki dice que acaba de transferirse** y que las materias son más difíciles.
+  Sus cuatro hermanas van al mismo instituto, así que se transfirieron todas.
+  Es coherente, pero conviene que lo sea a propósito y no por descuido.
 
 ---
 
@@ -872,28 +1244,33 @@ Antes de empezar hay que decidir:
 
 Recordar usar siempre `$ sumar_punto("chica", n)` dentro de los `menu`.
 
-### Arte — cerrar el prólogo
+### Arte — el prólogo ya está cerrado
 
-En orden, porque el primero desbloquea a los demás:
+Fondos, CG y sprites están completos y al mismo estándar. Lo que queda es
+opcional o depende del Capítulo 1:
 
-1. **Definir qué expresiones necesita cada hermana en el prólogo y generar las
-   que falten.** Nino, Miku y Yotsuba tienen una sola cada una. La lista sale
-   del guion de `01_prologo.rpy`, que ya está escrito: es cuestión de barrerlo
-   y anotar cada cambio de tono.
-2. Generar los CG de Yotsuba e Itsuki para completar la escena de la
-   presentación.
-3. ~~Rehacer los sprites de Raiha e Isanari~~ — hecho: cuatro sprites a
-   760 × 930 con las filas de ojos de la tabla de alturas.
+1. ~~Expresiones que faltan a Nino, Miku y Yotsuba~~ — **aplazado a propósito**.
+   Se generarán contra el guion del Capítulo 1 cuando esté escrito, no antes.
+   La lección de `itsuki_timida` es que generar contra suposición produce arte
+   que no se usa.
+2. ~~Generar los CG de Yotsuba e Itsuki~~ — hechos.
+3. ~~Rehacer los sprites de Raiha e Isanari~~ — hecho.
 4. Decidir el tono de pelo de Miku —CG o sprite— y unificar.
-5. Aplicar el tinte cálido por escena a los sprites, para que dejen de leerse
-   como pegados encima del fondo.
-6. Opcional: `cg_maruo_espaldas` para el cierre de la escena 6.
-7. Opcional: variante de tarde de `bg_instituto` y variante de noche de
-   `bg_departamento`. La segunda se resuelve con el tinte de `MatrixColor` sin
-   gastar créditos; la primera necesita la semilla del fondo actual.
-8. Opcional: regenerar a Itsuki en vertical con las rodillas visibles y rehacer
-   el set completo para ganar pierna en las cinco. Es la única forma de subir
-   el corte inferior, y cuanto más tarde se haga, más sprites hay que rehacer.
+5. Corregir la falda olivácea de `itsuki_neutral`.
+6. Aplicar el tinte cálido por escena a los sprites.
+7. Opcional: `cg_maruo_espaldas` para el cierre de la escena 6.
+8. Opcional: variante de tarde de `bg_instituto` y de noche de
+   `bg_departamento`. La segunda se resuelve con `MatrixColor` sin gastar
+   créditos.
+9. Opcional: regenerar a Itsuki en vertical y rehacer el set para ganar pierna
+   en las cinco. Cuanto más tarde, más sprites hay que rehacer.
+
+### Audio — solo falta descargar
+
+Los cues están escritos y las pistas elegidas. Queda bajar los archivos, ir
+comprobando la costura del bucle de cada uno, y rellenar la tabla de créditos.
+Vigilar sobre todo dos: `cotidiano` (ピアノ25) en el instituto, que es la que
+menos claro está, y `incomodo` (Zany Escape) en el aula.
 
 ### Guardar las semillas
 
