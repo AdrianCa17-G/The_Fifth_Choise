@@ -4,7 +4,7 @@ Fan visual novel basada en **Quintessential Quintuplets** (Go-toubun no Hanayome
 El jugador vive los eventos canónicos del anime y sus decisiones determinan con
 cuál de las cinco quintillizas termina.
 
-**Motor:** Ren'Py 8.5.3 · **Desarrollo:** Adrian · **Proyecto fan sin ánimo de lucro**
+**Motor:** Ren'Py 8.5.3 · **Desarrollo:** Adrian (AdrianKiller17) · **Proyecto fan sin ánimo de lucro**
 
 ---
 
@@ -31,6 +31,7 @@ cuál de las cinco quintillizas termina.
 | [`docs/GUIA_ARTE.md`](docs/GUIA_ARTE.md) | Generación de imágenes: PixAI, LoRAs, prompts, estándar de sprites, scripts de post |
 | [`docs/GUIA_AUDIO.md`](docs/GUIA_AUDIO.md) | Fuentes, licencias, escala de volumen, montaje |
 | [`docs/GUIA_RENPY.md`](docs/GUIA_RENPY.md) | Trampas del motor ya encontradas y convenciones de código |
+| [`CREDITOS.md`](CREDITOS.md) | Atribuciones, licencias de los assets y aviso de proyecto fan |
 
 Las tres guías son **transversales**: valen para los tres capítulos que quedan,
 no solo para el prólogo. Consultarlas antes de generar arte nuevo o tocar audio.
@@ -72,6 +73,9 @@ Quintuplets/
         │   ├── Fondo_Menu.png
         │   ├── Logo_Menu.png
         │   └── petal.png
+        ├── fonts/
+        │   ├── NotoSansJP-Regular.ttf    solo para el japonés de los créditos
+        │   └── OFL.txt                   licencia, obligatorio distribuirla
         ├── 00_definiciones.rpy          ✅
         ├── 01_prologo.rpy               ✅
         ├── 06_main_menu.rpy             ✅
@@ -212,6 +216,7 @@ inicio del Capítulo 1.
 | Efectos de sonido | 効果音ラボ |
 | Ambiente | Springin' Sound Stock |
 | Edición de audio | Audacity |
+| Tipografía japonesa | Noto Sans JP (SIL OFL 1.1), solo para los créditos |
 | Asistencia de código y guion | Claude |
 
 Detalles de configuración en [`docs/GUIA_ARTE.md`](docs/GUIA_ARTE.md) y
