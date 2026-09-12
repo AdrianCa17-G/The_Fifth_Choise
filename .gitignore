@@ -1,0 +1,31 @@
+# ── Ren'Py: generado por el motor, nunca versionar ──────────────────────────
+# Los .rpyc son bytecode. Además de sobrar, si uno queda desincronizado con su
+# .rpy el motor sigue cargando el viejo y el error reaparece idéntico.
+*.rpyc
+*.rpab
+*.rpa
+*.rpymc
+
+game/cache/
+game/saves/
+game/tl/
+game/libs/
+
+# Compilaciones y logs
+/dist/
+log.txt
+errors.txt
+traceback.txt
+
+# ── Trabajo intermedio de arte y audio ──────────────────────────────────────
+# Los renders crudos de PixAI y los proyectos de Audacity pesan mucho y no son
+# el entregable. Lo que se versiona es el resultado ya normalizado en game/.
+*.aup3
+*.aup3-*
+renders_crudos/
+audio_crudo/
+
+# ── Sistema ─────────────────────────────────────────────────────────────────
+Thumbs.db
+desktop.ini
+.DS_Store
